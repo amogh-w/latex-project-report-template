@@ -10,6 +10,11 @@
 % NIT Calicut
 % Contact Info: kartiksinghal@gmail.com
 %
+% Modified by: Amogh Warkhandkar
+% BE IT Batch of 2017-21
+% Vidyalankar Institute of Technology, Mumbai
+% Contact Info: amoghw2025@gmail.com
+%
 % It is advisable to learn the basics of LaTeX before using this template.
 % A good resource to start with is http://en.wikibooks.org/wiki/LaTeX/
 %
@@ -24,7 +29,8 @@
 \usepackage[pdftex]{graphicx} %for embedding images
 \usepackage{url} %for proper url entries
 \usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
-%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+% \usepackage{kpfonts}
+% \usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
 
 \begin{document}
 \renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
@@ -32,6 +38,9 @@
 %include other pages
 \input{./title.tex}
 \input{./certificate.tex}
+\input{./approval.tex}
+\input{./declaration.tex}
+\input{./acknowledgement.tex}
 \input{./abstract.tex}
 
 \pagenumbering{roman} %numbering before main content starts
@@ -41,12 +50,12 @@
 \newpage
 \pagenumbering{arabic} %reset numbering to normal for the main content
 
-\input{./prob-definition.tex} %objective changed to problem definition
-\input{./introduction.tex} %literature survey included in this
-\input{./work-done.tex}
-\input{./future-work.tex}
-\input{./conclusion.tex}
-\input{./acknow.tex}
-\input{./ref.tex}
+% \input{./prob-definition.tex} %objective changed to problem definition
+% \input{./introduction.tex} %literature survey included in this
+% \input{./work-done.tex}
+% \input{./future-work.tex}
+% \input{./conclusion.tex}
+% \input{./acknow.tex}
+% \input{./ref.tex}
 
 \end{document}
