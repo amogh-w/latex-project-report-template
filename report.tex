@@ -32,19 +32,23 @@
 \usepackage{blindtext}
 \usepackage{tabularx}
 \usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{listings}
 % \usepackage{kpfonts}
 % \usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+
+\graphicspath{{./images/}}
 
 \begin{document}
 \renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
 
 %include other pages
-\input{./title.tex}
-\input{./certificate.tex}
-\input{./approval.tex}
-\input{./declaration.tex}
-\input{./acknowledgement.tex}
-\input{./abstract.tex}
+\input{./intro/title.tex}
+\input{./intro/certificate.tex}
+\input{./intro/approval.tex}
+\input{./intro/declaration.tex}
+\input{./intro/acknowledgement.tex}
+\input{./intro/abstract.tex}
 
 \pagenumbering{roman} %numbering before main content starts
 \tableofcontents
@@ -54,14 +58,7 @@
 \newpage
 \pagenumbering{arabic} %reset numbering to normal for the main content
 
-% \input{./prob-definition.tex} %objective changed to problem definition
-\input{./introduction.tex} %literature survey included in this
-\input{./literature-survery.tex} %literature survey included in this
-\input{./system-design.tex} %literature survey included in this
-% \input{./work-done.tex}
-% \input{./future-work.tex}
-% \input{./conclusion.tex}
-% \input{./acknow.tex}
-% \input{./ref.tex}
+\input{./content/sample.tex} %literature survey included in this
+\input{./outro/ref.tex} %literature survey included in this
 
 \end{document}
