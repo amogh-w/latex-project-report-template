@@ -17,32 +17,25 @@
 %
 % It is advisable to learn the basics of LaTeX before using this template.
 % A good resource to start with is http://en.wikibooks.org/wiki/LaTeX/
-%
-% All template fields are marked with a pair of angular brackets e.g. <title here>
-% except for the ones defining citation names in ref.tex.
-%
-% Empty space after chapter/section/subsection titles can be used to insert text.
-%
-% Just compile this file using pdflatex after making all required changes.
 
 \documentclass[12pt,a4paper]{report}
-\usepackage[pdftex]{graphicx} %for embedding images
-\usepackage{url} %for proper url entries
-\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref}
 \usepackage{blindtext}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{listings}
-% \usepackage{kpfonts}
-% \usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
 
 \graphicspath{{./images/}}
 
 \begin{document}
-\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+\renewcommand\bibname{References}
 
-%include other pages
+\pagenumbering{roman}
+
+%include intro pages
 \input{./intro/title.tex}
 \input{./intro/certificate.tex}
 \input{./intro/approval.tex}
@@ -50,15 +43,20 @@
 \input{./intro/acknowledgement.tex}
 \input{./intro/abstract.tex}
 
-\pagenumbering{roman} %numbering before main content starts
 \tableofcontents
-\listoffigures
-\listoftables
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures\newpage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables\newpage
 
 \newpage
-\pagenumbering{arabic} %reset numbering to normal for the main content
+\pagenumbering{arabic}
 
-\input{./content/sample.tex} %literature survey included in this
-\input{./outro/ref.tex} %literature survey included in this
+%include content pages
+\input{./content/sample.tex}
+
+%include outro pages
+\input{./outro/references.tex}
 
 \end{document}
